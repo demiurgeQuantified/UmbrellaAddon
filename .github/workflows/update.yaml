@@ -9,8 +9,6 @@ jobs:
     steps:
     - name: Checkout current version
       uses: actions/checkout@v4
-      with:
-        ref: 'actiontest'
 
     - name: Remove old library
       run: |
@@ -34,6 +32,11 @@ jobs:
       with:
         path: library/Events
         repository: demiurgeQuantified/PZEventStubs
+
+    - name: Delete misc files
+      run: |
+        rm -f library/Candle/README.md
+        rm -f library/Events/README.md
 
     - name: StyLua
       uses: JohnnyMorganz/stylua-action@v4.0.0
