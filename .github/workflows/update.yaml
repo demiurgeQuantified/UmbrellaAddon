@@ -1,0 +1,50 @@
+name: update
+on: workflow_dispatch
+jobs:
+  update:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout current version
+      uses: actions/checkout@v4
+      with:
+        ref: 'actiontest'
+
+    - name: Remove old library
+      run: |
+        rm -rf library
+        mkdir library
+
+    - name: Checkout Candle
+      uses: actions/checkout@v4
+      with:
+        path: library/Candle
+        repository: asledgehammer/Candle
+
+    - name: Checkout Lua
+      uses: actions/checkout@v4
+      with:
+        path: library/Lua
+        repository: omarkmu/PZLuaStubs
+
+    - name: Checkout Events
+      uses: actions/checkout@v4
+      with:
+        path: library/Events
+        repository: demiurgeQuantified/PZEventStubs
+
+    - name: StyLua
+      uses: JohnnyMorganz/stylua-action@v4.0.0
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        args: --check
+        version: latest
+
+    - name: Commit changes
+      run:
+        git config user.name [Bot]demiurgeQuantified
+        git config user.email 8355611+demiurgeQuantified@users.noreply.github.com
+        git commit -a -m "Updated by Github Action"
+        git push
