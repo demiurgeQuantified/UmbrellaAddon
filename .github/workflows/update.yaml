@@ -9,6 +9,8 @@ jobs:
     steps:
     - name: Checkout current version
       uses: actions/checkout@v4
+      with:
+        ref: 'addon'
 
     - name: Remove old library
       run: |
