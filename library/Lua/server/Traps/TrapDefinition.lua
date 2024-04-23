@@ -1,5 +1,0 @@
----@meta
-
-Traps = {}
-
-Animals = {}
