@@ -59,7 +59,7 @@ function RandomizedZoneStoryBase:getRandomFreeSquareFullZone(rzs, zone) end
 
 --- @public
 --- @return boolean
---- @overload fun(zone: Zone, force: boolean): boolean
+--- @overload fun(self: RandomizedZoneStoryBase, zone: Zone, force: boolean): boolean
 function RandomizedZoneStoryBase:isValid() end
 
 --- @public

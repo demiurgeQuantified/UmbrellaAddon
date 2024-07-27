@@ -38,7 +38,7 @@ function ScriptManager:CheckExitPoints() end
 --- @public
 --- @param name String
 --- @return Item
---- @overload fun(name: String, moduleDefaultsToBase: boolean): Item
+--- @overload fun(self: ScriptManager, name: String, moduleDefaultsToBase: boolean): Item
 function ScriptManager:FindItem(name) end
 
 --- @public
@@ -122,7 +122,7 @@ function ScriptManager:getChecksum() end
 --- @public
 --- @param name String
 --- @return Item
---- @overload fun(name: String): Item
+--- @overload fun(self: ScriptManager, name: String): Item
 function ScriptManager:getItem(name) end
 
 --- @public
@@ -158,7 +158,7 @@ function ScriptManager:getModelScript(name) end
 --- @public
 --- @param name String
 --- @return ScriptModule
---- @overload fun(name: String, defaultToBase: boolean): ScriptModule
+--- @overload fun(self: ScriptManager, name: String, defaultToBase: boolean): ScriptModule
 function ScriptManager:getModule(name) end
 
 --- @public
@@ -169,7 +169,7 @@ function ScriptManager:getModuleNoDisableCheck(name) end
 --- @public
 --- @param name String
 --- @return Recipe
---- @overload fun(name: String): Recipe
+--- @overload fun(self: ScriptManager, name: String): Recipe
 function ScriptManager:getRecipe(name) end
 
 --- @public

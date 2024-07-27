@@ -41,36 +41,36 @@ function LinkedList.of() end
 --- @public
 --- @param arg0 Object
 --- @return boolean
---- @overload fun(arg0: Object): boolean
---- @overload fun(arg0: Object): boolean
---- @overload fun(arg0: int, arg1: Object): void
---- @overload fun(arg0: int, arg1: Object): void
+--- @overload fun(self: LinkedList, arg0: Object): boolean
+--- @overload fun(self: LinkedList, arg0: Object): boolean
+--- @overload fun(self: LinkedList, arg0: int, arg1: Object): void
+--- @overload fun(self: LinkedList, arg0: int, arg1: Object): void
 function LinkedList:add(arg0) end
 
 --- @public
 --- @param arg0 Collection
 --- @return boolean
---- @overload fun(arg0: Collection): boolean
---- @overload fun(arg0: Collection): boolean
---- @overload fun(arg0: int, arg1: Collection): boolean
---- @overload fun(arg0: int, arg1: Collection): boolean
+--- @overload fun(self: LinkedList, arg0: Collection): boolean
+--- @overload fun(self: LinkedList, arg0: Collection): boolean
+--- @overload fun(self: LinkedList, arg0: int, arg1: Collection): boolean
+--- @overload fun(self: LinkedList, arg0: int, arg1: Collection): boolean
 function LinkedList:addAll(arg0) end
 
 --- @public
 --- @param arg0 Object
 --- @return void
---- @overload fun(arg0: Object): void
+--- @overload fun(self: LinkedList, arg0: Object): void
 function LinkedList:addFirst(arg0) end
 
 --- @public
 --- @param arg0 Object
 --- @return void
---- @overload fun(arg0: Object): void
+--- @overload fun(self: LinkedList, arg0: Object): void
 function LinkedList:addLast(arg0) end
 
 --- @public
 --- @return void
---- @overload fun(): void
+--- @overload fun(self: LinkedList): void
 function LinkedList:clear() end
 
 --- @public
@@ -80,8 +80,8 @@ function LinkedList:clone() end
 --- @public
 --- @param arg0 Object
 --- @return boolean
---- @overload fun(arg0: Object): boolean
---- @overload fun(arg0: Object): boolean
+--- @overload fun(self: LinkedList, arg0: Object): boolean
+--- @overload fun(self: LinkedList, arg0: Object): boolean
 function LinkedList:contains(arg0) end
 
 --- @public
@@ -91,12 +91,12 @@ function LinkedList:containsAll(arg0) end
 
 --- @public
 --- @return Iterator
---- @overload fun(): Iterator
+--- @overload fun(self: LinkedList): Iterator
 function LinkedList:descendingIterator() end
 
 --- @public
 --- @return Object
---- @overload fun(): Object
+--- @overload fun(self: LinkedList): Object
 function LinkedList:element() end
 
 --- @public
@@ -107,17 +107,17 @@ function LinkedList:equals(arg0) end
 --- @public
 --- @param arg0 int
 --- @return Object
---- @overload fun(arg0: int): Object
+--- @overload fun(self: LinkedList, arg0: int): Object
 function LinkedList:get(arg0) end
 
 --- @public
 --- @return Object
---- @overload fun(): Object
+--- @overload fun(self: LinkedList): Object
 function LinkedList:getFirst() end
 
 --- @public
 --- @return Object
---- @overload fun(): Object
+--- @overload fun(self: LinkedList): Object
 function LinkedList:getLast() end
 
 --- @public
@@ -127,7 +127,7 @@ function LinkedList:hashCode() end
 --- @public
 --- @param arg0 Object
 --- @return int
---- @overload fun(arg0: Object): int
+--- @overload fun(self: LinkedList, arg0: Object): int
 function LinkedList:indexOf(arg0) end
 
 --- @public
@@ -136,88 +136,88 @@ function LinkedList:isEmpty() end
 
 --- @public
 --- @return Iterator
---- @overload fun(): Iterator
+--- @overload fun(self: LinkedList): Iterator
 function LinkedList:iterator() end
 
 --- @public
 --- @param arg0 Object
 --- @return int
---- @overload fun(arg0: Object): int
+--- @overload fun(self: LinkedList, arg0: Object): int
 function LinkedList:lastIndexOf(arg0) end
 
 --- @public
 --- @return ListIterator
---- @overload fun(arg0: int): ListIterator
---- @overload fun(arg0: int): ListIterator
+--- @overload fun(self: LinkedList, arg0: int): ListIterator
+--- @overload fun(self: LinkedList, arg0: int): ListIterator
 function LinkedList:listIterator() end
 
 --- @public
 --- @param arg0 Object
 --- @return boolean
---- @overload fun(arg0: Object): boolean
+--- @overload fun(self: LinkedList, arg0: Object): boolean
 function LinkedList:offer(arg0) end
 
 --- @public
 --- @param arg0 Object
 --- @return boolean
---- @overload fun(arg0: Object): boolean
+--- @overload fun(self: LinkedList, arg0: Object): boolean
 function LinkedList:offerFirst(arg0) end
 
 --- @public
 --- @param arg0 Object
 --- @return boolean
---- @overload fun(arg0: Object): boolean
+--- @overload fun(self: LinkedList, arg0: Object): boolean
 function LinkedList:offerLast(arg0) end
 
 --- @public
 --- @return Object
---- @overload fun(): Object
+--- @overload fun(self: LinkedList): Object
 function LinkedList:peek() end
 
 --- @public
 --- @return Object
---- @overload fun(): Object
+--- @overload fun(self: LinkedList): Object
 function LinkedList:peekFirst() end
 
 --- @public
 --- @return Object
---- @overload fun(): Object
+--- @overload fun(self: LinkedList): Object
 function LinkedList:peekLast() end
 
 --- @public
 --- @return Object
---- @overload fun(): Object
+--- @overload fun(self: LinkedList): Object
 function LinkedList:poll() end
 
 --- @public
 --- @return Object
---- @overload fun(): Object
+--- @overload fun(self: LinkedList): Object
 function LinkedList:pollFirst() end
 
 --- @public
 --- @return Object
---- @overload fun(): Object
+--- @overload fun(self: LinkedList): Object
 function LinkedList:pollLast() end
 
 --- @public
 --- @return Object
---- @overload fun(): Object
+--- @overload fun(self: LinkedList): Object
 function LinkedList:pop() end
 
 --- @public
 --- @param arg0 Object
 --- @return void
---- @overload fun(arg0: Object): void
+--- @overload fun(self: LinkedList, arg0: Object): void
 function LinkedList:push(arg0) end
 
 --- @public
 --- @return Object
---- @overload fun(): Object
---- @overload fun(arg0: int): Object
---- @overload fun(arg0: int): Object
---- @overload fun(arg0: Object): boolean
---- @overload fun(arg0: Object): boolean
---- @overload fun(arg0: Object): boolean
+--- @overload fun(self: LinkedList): Object
+--- @overload fun(self: LinkedList, arg0: int): Object
+--- @overload fun(self: LinkedList, arg0: int): Object
+--- @overload fun(self: LinkedList, arg0: Object): boolean
+--- @overload fun(self: LinkedList, arg0: Object): boolean
+--- @overload fun(self: LinkedList, arg0: Object): boolean
 function LinkedList:remove() end
 
 --- @public
@@ -227,24 +227,24 @@ function LinkedList:removeAll(arg0) end
 
 --- @public
 --- @return Object
---- @overload fun(): Object
+--- @overload fun(self: LinkedList): Object
 function LinkedList:removeFirst() end
 
 --- @public
 --- @param arg0 Object
 --- @return boolean
---- @overload fun(arg0: Object): boolean
+--- @overload fun(self: LinkedList, arg0: Object): boolean
 function LinkedList:removeFirstOccurrence(arg0) end
 
 --- @public
 --- @return Object
---- @overload fun(): Object
+--- @overload fun(self: LinkedList): Object
 function LinkedList:removeLast() end
 
 --- @public
 --- @param arg0 Object
 --- @return boolean
---- @overload fun(arg0: Object): boolean
+--- @overload fun(self: LinkedList, arg0: Object): boolean
 function LinkedList:removeLastOccurrence(arg0) end
 
 --- @public
@@ -261,13 +261,13 @@ function LinkedList:retainAll(arg0) end
 --- @param arg0 int
 --- @param arg1 Object
 --- @return Object
---- @overload fun(arg0: int, arg1: Object): Object
+--- @overload fun(self: LinkedList, arg0: int, arg1: Object): Object
 function LinkedList:set(arg0, arg1) end
 
 --- @public
 --- @return int
---- @overload fun(): int
---- @overload fun(): int
+--- @overload fun(self: LinkedList): int
+--- @overload fun(self: LinkedList): int
 function LinkedList:size() end
 
 --- @public
@@ -277,7 +277,7 @@ function LinkedList:sort(arg0) end
 
 --- @public
 --- @return Spliterator
---- @overload fun(): Spliterator
+--- @overload fun(self: LinkedList): Spliterator
 function LinkedList:spliterator() end
 
 --- @public
@@ -288,9 +288,9 @@ function LinkedList:subList(arg0, arg1) end
 
 --- @public
 --- @return Object[]
---- @overload fun(): Object[]
---- @overload fun(arg0: Object[]): Object[]
---- @overload fun(arg0: Object[]): Object[]
+--- @overload fun(self: LinkedList): Object[]
+--- @overload fun(self: LinkedList, arg0: Object[]): Object[]
+--- @overload fun(self: LinkedList, arg0: Object[]): Object[]
 function LinkedList:toArray() end
 
 ------------------------------------

@@ -54,7 +54,7 @@ function ItemVisual:getAlternateModelName() end
 
 --- @public
 --- @return int
---- @overload fun(clothingItem: ClothingItem): String
+--- @overload fun(self: ItemVisual, clothingItem: ClothingItem): String
 function ItemVisual:getBaseTexture() end
 
 --- @public
@@ -136,12 +136,12 @@ function ItemVisual:getScriptItem() end
 
 --- @public
 --- @return int
---- @overload fun(clothingItem: ClothingItem): String
+--- @overload fun(self: ItemVisual, clothingItem: ClothingItem): String
 function ItemVisual:getTextureChoice() end
 
 --- @public
 --- @return ImmutableColor
---- @overload fun(clothingItem: ClothingItem): ImmutableColor
+--- @overload fun(self: ItemVisual, clothingItem: ClothingItem): ImmutableColor
 function ItemVisual:getTint() end
 
 --- @public

@@ -402,7 +402,7 @@ function Clothing:update() end
 
 --- @public
 --- @return void
---- @overload fun(bIgnoreEquipped: boolean): void
+--- @overload fun(self: Clothing, bIgnoreEquipped: boolean): void
 function Clothing:updateWetness() end
 
 ------------------------------------

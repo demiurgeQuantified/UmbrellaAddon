@@ -210,7 +210,7 @@ function IsoMetaGrid:getZoneWithBoundsAndType(x, y, z, w, h, type) end
 --- @param y int
 --- @param z int
 --- @return ArrayList
---- @overload fun(x: int, y: int, z: int, result: ArrayList): ArrayList
+--- @overload fun(self: IsoMetaGrid, x: int, y: int, z: int, result: ArrayList): ArrayList
 function IsoMetaGrid:getZonesAt(x, y, z) end
 
 --- @public
@@ -220,7 +220,7 @@ function IsoMetaGrid:getZonesAt(x, y, z) end
 --- @param w int
 --- @param h int
 --- @return ArrayList
---- @overload fun(x: int, y: int, z: int, w: int, h: int, result: ArrayList): ArrayList
+--- @overload fun(self: IsoMetaGrid, x: int, y: int, z: int, w: int, h: int, result: ArrayList): ArrayList
 function IsoMetaGrid:getZonesIntersecting(x, y, z, w, h) end
 
 --- @public
@@ -246,7 +246,7 @@ function IsoMetaGrid:isZoneAbove(zone1, zone2, x, y, z) end
 
 --- @public
 --- @return void
---- @overload fun(input: ByteBuffer): void
+--- @overload fun(self: IsoMetaGrid, input: ByteBuffer): void
 function IsoMetaGrid:load() end
 
 --- @public
@@ -318,7 +318,7 @@ function IsoMetaGrid:registerVehiclesZone(name, type, x, y, z, width, height, pr
 --- @param width int
 --- @param height int
 --- @return Zone
---- @overload fun(name: String, type: String, x: int, y: int, z: int, width: int, height: int, geometryType: ZoneGeometryType, points: TIntArrayList, polylineWidth: int): Zone
+--- @overload fun(self: IsoMetaGrid, name: String, type: String, x: int, y: int, z: int, width: int, height: int, geometryType: ZoneGeometryType, points: TIntArrayList, polylineWidth: int): Zone
 function IsoMetaGrid:registerZone(name, type, x, y, z, width, height) end
 
 --- @public
@@ -350,7 +350,7 @@ function IsoMetaGrid:removeZonesForLotDirectory(lotDir) end
 
 --- @public
 --- @return void
---- @overload fun(output: ByteBuffer): void
+--- @overload fun(self: IsoMetaGrid, output: ByteBuffer): void
 function IsoMetaGrid:save() end
 
 --- @public

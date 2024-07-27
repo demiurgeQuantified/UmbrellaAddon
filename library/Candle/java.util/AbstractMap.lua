@@ -49,7 +49,7 @@ function AbstractMap.ofEntries(arg0) end
 
 --- @public
 --- @return void
---- @overload fun(): void
+--- @overload fun(self: AbstractMap): void
 function AbstractMap:clear() end
 
 --- @public
@@ -73,24 +73,24 @@ function AbstractMap:computeIfPresent(arg0, arg1) end
 --- @public
 --- @param arg0 Object
 --- @return boolean
---- @overload fun(arg0: Object): boolean
+--- @overload fun(self: AbstractMap, arg0: Object): boolean
 function AbstractMap:containsKey(arg0) end
 
 --- @public
 --- @param arg0 Object
 --- @return boolean
---- @overload fun(arg0: Object): boolean
+--- @overload fun(self: AbstractMap, arg0: Object): boolean
 function AbstractMap:containsValue(arg0) end
 
 --- @public
 --- @return Set
---- @overload fun(): Set
+--- @overload fun(self: AbstractMap): Set
 function AbstractMap:entrySet() end
 
 --- @public
 --- @param arg0 Object
 --- @return boolean
---- @overload fun(arg0: Object): boolean
+--- @overload fun(self: AbstractMap, arg0: Object): boolean
 function AbstractMap:equals(arg0) end
 
 --- @public
@@ -101,7 +101,7 @@ function AbstractMap:forEach(arg0) end
 --- @public
 --- @param arg0 Object
 --- @return Object
---- @overload fun(arg0: Object): Object
+--- @overload fun(self: AbstractMap, arg0: Object): Object
 function AbstractMap:get(arg0) end
 
 --- @public
@@ -112,17 +112,17 @@ function AbstractMap:getOrDefault(arg0, arg1) end
 
 --- @public
 --- @return int
---- @overload fun(): int
+--- @overload fun(self: AbstractMap): int
 function AbstractMap:hashCode() end
 
 --- @public
 --- @return boolean
---- @overload fun(): boolean
+--- @overload fun(self: AbstractMap): boolean
 function AbstractMap:isEmpty() end
 
 --- @public
 --- @return Set
---- @overload fun(): Set
+--- @overload fun(self: AbstractMap): Set
 function AbstractMap:keySet() end
 
 --- @public
@@ -136,13 +136,13 @@ function AbstractMap:merge(arg0, arg1, arg2) end
 --- @param arg0 Object
 --- @param arg1 Object
 --- @return Object
---- @overload fun(arg0: Object, arg1: Object): Object
+--- @overload fun(self: AbstractMap, arg0: Object, arg1: Object): Object
 function AbstractMap:put(arg0, arg1) end
 
 --- @public
 --- @param arg0 Map
 --- @return void
---- @overload fun(arg0: Map): void
+--- @overload fun(self: AbstractMap, arg0: Map): void
 function AbstractMap:putAll(arg0) end
 
 --- @public
@@ -154,15 +154,15 @@ function AbstractMap:putIfAbsent(arg0, arg1) end
 --- @public
 --- @param arg0 Object
 --- @return Object
---- @overload fun(arg0: Object): Object
---- @overload fun(arg0: Object, arg1: Object): boolean
+--- @overload fun(self: AbstractMap, arg0: Object): Object
+--- @overload fun(self: AbstractMap, arg0: Object, arg1: Object): boolean
 function AbstractMap:remove(arg0) end
 
 --- @public
 --- @param arg0 Object
 --- @param arg1 Object
 --- @return Object
---- @overload fun(arg0: Object, arg1: Object, arg2: Object): boolean
+--- @overload fun(self: AbstractMap, arg0: Object, arg1: Object, arg2: Object): boolean
 function AbstractMap:replace(arg0, arg1) end
 
 --- @public
@@ -172,7 +172,7 @@ function AbstractMap:replaceAll(arg0) end
 
 --- @public
 --- @return int
---- @overload fun(): int
+--- @overload fun(self: AbstractMap): int
 function AbstractMap:size() end
 
 --- @public
@@ -181,5 +181,5 @@ function AbstractMap:toString() end
 
 --- @public
 --- @return Collection
---- @overload fun(): Collection
+--- @overload fun(self: AbstractMap): Collection
 function AbstractMap:values() end

@@ -40,7 +40,7 @@ function IsoMovingObject:Despawn() end
 --- @public
 --- @param other IsoMovingObject
 --- @return float
---- @overload fun(x: int, y: int): float
+--- @overload fun(self: IsoMovingObject, x: int, y: int): float
 function IsoMovingObject:DistTo(other) end
 
 --- @public
@@ -51,7 +51,7 @@ function IsoMovingObject:DistToProper(other) end
 --- @public
 --- @param other IsoMovingObject
 --- @return float
---- @overload fun(x: float, y: float): float
+--- @overload fun(self: IsoMovingObject, x: float, y: float): float
 function IsoMovingObject:DistToSquared(other) end
 
 --- @public
@@ -168,7 +168,7 @@ function IsoMovingObject:getFuturWalkedSquare() end
 
 --- @public
 --- @return float
---- @overload fun(bDoNoises: boolean): float
+--- @overload fun(self: IsoMovingObject, bDoNoises: boolean): float
 function IsoMovingObject:getGlobalMovementMod() end
 
 --- @public
@@ -185,7 +185,7 @@ function IsoMovingObject:getHitFromAngle() end
 
 --- @public
 --- @return int
---- @overload fun(): int
+--- @overload fun(self: IsoMovingObject): int
 function IsoMovingObject:getID() end
 
 --- @public
@@ -254,7 +254,7 @@ function IsoMovingObject:getObjectName() end
 
 --- @public
 --- @return int
---- @overload fun(): int
+--- @overload fun(self: IsoMovingObject): int
 function IsoMovingObject:getPathFindIndex() end
 
 --- @public
@@ -308,7 +308,7 @@ function IsoMovingObject:getVectorFromDirection(moveForwardVec) end
 
 --- @public
 --- @return float
---- @overload fun(x: float, y: float): float
+--- @overload fun(self: IsoMovingObject, x: float, y: float): float
 function IsoMovingObject:getWeight() end
 
 --- @public

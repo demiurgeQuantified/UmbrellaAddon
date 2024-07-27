@@ -103,7 +103,7 @@ function SafeHouse:addPlayer(player) end
 --- @public
 --- @param username String
 --- @return SafeHouse
---- @overload fun(player: IsoPlayer): SafeHouse
+--- @overload fun(self: SafeHouse, player: IsoPlayer): SafeHouse
 function SafeHouse:alreadyHaveSafehouse(username) end
 
 --- @public
@@ -187,7 +187,7 @@ function SafeHouse:kickOutOfSafehouse(player) end
 --- @public
 --- @param name String
 --- @return boolean
---- @overload fun(player: IsoPlayer): boolean
+--- @overload fun(self: SafeHouse, player: IsoPlayer): boolean
 function SafeHouse:playerAllowed(name) end
 
 --- @public
@@ -198,7 +198,7 @@ function SafeHouse:removePlayer(player) end
 --- @public
 --- @param player IsoPlayer
 --- @return void
---- @overload fun(player: IsoPlayer, force: boolean): void
+--- @overload fun(self: SafeHouse, player: IsoPlayer, force: boolean): void
 function SafeHouse:removeSafeHouse(player) end
 
 --- @public
